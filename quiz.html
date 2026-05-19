@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Викторина | Новый корпус ТюмГУ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="bg-animation" id="bgAnim"></div>
+<header>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo"><h1>ТюмГУ | Новый корпус</h1></div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="about.html" class="nav-link">О корпусе</a>
+                <a href="map.html" class="nav-link">Карта</a>
+                <a href="quiz.html" class="nav-link">Викторина</a>
+                <a href="teachers.html" class="nav-link">Преподаватели</a>
+            </div>
+            <div class="theme-lang">
+                <button class="icon-btn" id="themeToggle">Тёмная</button>
+                <button class="icon-btn" id="langToggle">EN</button>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="container">
+    <div class="card">
+        <h2 data-i18n="quiz_title">Викторина: Знаете ли вы новый корпус ТюмГУ?</h2>
+        <div class="score" id="quizScore">Счёт: 0 / 6</div>
+        <div id="quizContainer"></div>
+        <button id="resetQuiz" class="reset-btn" data-i18n="reset_quiz">Сбросить викторину</button>
+    </div>
+</main>
+<footer><p>© 2025 ТюмГУ</p></footer>
+<button id="goToTop" class="up-btn">↑ Наверх</button>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О корпусе | Новый корпус ТюмГУ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="bg-animation" id="bgAnim"></div>
+<header>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo"><h1>ТюмГУ | Новый корпус</h1></div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="about.html" class="nav-link">О корпусе</a>
+                <a href="map.html" class="nav-link">Карта</a>
+                <a href="quiz.html" class="nav-link">Викторина</a>
+                <a href="teachers.html" class="nav-link">Преподаватели</a>
+            </div>
+            <div class="theme-lang">
+                <button class="icon-btn" id="themeToggle">Тёмная</button>
+                <button class="icon-btn" id="langToggle">EN</button>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="container">
+    <div class="card">
+        <h2 data-i18n="about_title">Архитектура и внутреннее пространство</h2>
+        <p data-i18n="about_text">Шестиэтажный атриум с панорамными лифтами, зоны для индивидуальной и групповой работы, современные лаборатории.</p>
+        <p data-i18n="about_details">На первом этаже — кафе и зона отдыха, на втором — коворкинг, с третьего по пятый — учебные аудитории и лаборатории, шестой этаж занимает администрация и конференц-залы.</p>
+    </div>
+
+    <div class="card">
+        <h3 data-i18n="locations_title">🏛️ Ключевые локации корпуса</h3>
+        <div class="gallery">
+            <div class="location-card" data-modal-type="location" data-location-id="coworking">
+                <img src="images/locations/coworking.jpg" alt="Coworking">
+                <div class="location-card-content">
+                    <h4 data-i18n="coworking_name">Коворкинг</h4>
+                    <p data-i18n="coworking_desc">Современное пространство для командной и индивидуальной работы.</p>
+                </div>
+            </div>
+            <div class="location-card" data-modal-type="location" data-location-id="library">
+                <img src="images/locations/library.jpg" alt="Library">
+                <div class="location-card-content">
+                    <h4 data-i18n="library_name">Библиотека-трансформер</h4>
+                    <p data-i18n="library_desc">Инновационное пространство, адаптируемое под любые форматы.</p>
+                </div>
+            </div>
+            <div class="location-card" data-modal-type="location" data-location-id="assembly_hall">
+                <img src="images/locations/assembly_hall.jpg" alt="Assembly Hall">
+                <div class="location-card-content">
+                    <h4 data-i18n="assembly_name">Актовый зал</h4>
+                    <p data-i18n="assembly_desc">Современная концертная и лекционная площадка на 500 мест.</p>
+                </div>
+            </div>
+            <div class="location-card" data-modal-type="location" data-location-id="courtyard">
+                <img src="images/locations/courtyard.jpg" alt="Courtyard">
+                <div class="location-card-content">
+                    <h4 data-i18n="courtyard_name">Внутренний двор</h4>
+                    <p data-i18n="courtyard_desc">Открытое пространство для отдыха и мероприятий в центре кампуса.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3 data-i18n="gallery_title">Фотогалерея корпуса</h3>
+        <div class="gallery">
+            <img src="images/facade.jpg" alt="Фасад корпуса" data-i18n-alt="facade_alt">
+            <img src="images/entrance.jpg" alt="Входная зона" data-i18n-alt="entrance_alt">
+            <img src="images/canteen.jpg" alt="Студенческая столовая" data-i18n-alt="canteen_alt">
+        </div>
+    </div>
+
+    <div class="card">
+        <h3 data-i18n="video_title">Видеоэкскурсия</h3>
+        <div class="video-placeholder">
+            <iframe width="100%" height="400" src="https://www.youtube.com/embed/87hZGVuOg38" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+</main>
+<footer><p>© 2025 Новый корпус ТюмГУ</p></footer>
+<button id="goToTop" class="up-btn">↑ Наверх</button>
+
+<div id="infoModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="modalTitle"></h2>
+            <span class="modal-close">&times;</span>
+        </div>
+        <div class="modal-body">
+            <img id="modalImage" src="" alt="">
+            <p id="modalFullDescription"></p>
+            <div id="modalContacts" class="modal-contacts"></div>
+            <p id="modalQuote"></p>
+        </div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

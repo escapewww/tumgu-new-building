@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Руководство и преподаватели | ТюмГУ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="bg-animation" id="bgAnim"></div>
+<header>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo"><h1>ТюмГУ | Новый корпус</h1></div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="about.html" class="nav-link">О корпусе</a>
+                <a href="map.html" class="nav-link">Карта</a>
+                <a href="quiz.html" class="nav-link">Викторина</a>
+                <a href="teachers.html" class="nav-link">Преподаватели</a>
+            </div>
+            <div class="theme-lang">
+                <button class="icon-btn" id="themeToggle">Тёмная</button>
+                <button class="icon-btn" id="langToggle">EN</button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <div class="card">
+        <h2 data-i18n="teachers_title">Руководство и ключевые сотрудники</h2>
+        <p data-i18n="teachers_sub">Нажмите на карточку, чтобы увидеть контакты и подробности</p>
+        <div class="teachers-grid">
+
+            <div class="teacher-card" data-modal-type="teacher" data-teacher-id="rector">
+                <div class="teacher-photo-wrap">
+                    <img class="teacher-photo" src="images/teachers/rector.jpg" alt="Rector">
+                </div>
+                <div class="teacher-name">Романчук Иван Сергеевич</div>
+                <div class="teacher-divider"></div>
+                <div class="teacher-post" data-i18n="post_rector">Ректор</div>
+                <div class="teacher-desc" data-i18n="desc_rector">Руководитель университета</div>
+                <div class="teacher-hint">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    <span data-i18n="details_hint">Подробнее</span>
+                </div>
+            </div>
+
+            <div class="teacher-card" data-modal-type="teacher" data-teacher-id="tolstikov">
+                <div class="teacher-photo-wrap">
+                    <img class="teacher-photo" src="images/teachers/tolstikov.jpg" alt="Tolstikov">
+                </div>
+                <div class="teacher-name">Толстиков Андрей Викторович</div>
+                <div class="teacher-divider"></div>
+                <div class="teacher-post" data-i18n="post_tolstikov">Первый проректор</div>
+                <div class="teacher-desc" data-i18n="desc_tolstikov">Координация образовательной деятельности</div>
+                <div class="teacher-hint">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    <span data-i18n="details_hint">Подробнее</span>
+                </div>
+            </div>
+
+            <div class="teacher-card" data-modal-type="teacher" data-teacher-id="vdovin">
+                <div class="teacher-photo-wrap">
+                    <img class="teacher-photo" src="images/teachers/vdovin.jpg" alt="Vdovin">
+                </div>
+                <div class="teacher-name">Вдовин Евгений Петрович</div>
+                <div class="teacher-divider"></div>
+                <div class="teacher-post" data-i18n="post_vdovin">Директор Школы компьютерных наук, проректор</div>
+                <div class="teacher-desc" data-i18n="desc_vdovin">IT-направления, цифровая трансформация</div>
+                <div class="teacher-hint">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    <span data-i18n="details_hint">Подробнее</span>
+                </div>
+            </div>
+
+            <div class="teacher-card" data-modal-type="teacher" data-teacher-id="lazutina">
+                <div class="teacher-photo-wrap">
+                    <img class="teacher-photo" src="images/teachers/lazutina.jpg" alt="Lazutina">
+                </div>
+                <div class="teacher-name">Лазутина Дарья Васильевна</div>
+                <div class="teacher-divider"></div>
+                <div class="teacher-post" data-i18n="post_lazutina">Директор ФЭИ, проректор</div>
+                <div class="teacher-desc" data-i18n="desc_lazutina">Финансы, экономика</div>
+                <div class="teacher-hint">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    <span data-i18n="details_hint">Подробнее</span>
+                </div>
+            </div>
+
+            <div class="teacher-card" data-modal-type="teacher" data-teacher-id="zenin">
+                <div class="teacher-photo-wrap">
+                    <img class="teacher-photo" src="images/teachers/zenin.jpg" alt="Zenin">
+                </div>
+                <div class="teacher-name">Зенин Сергей Сергеевич</div>
+                <div class="teacher-divider"></div>
+                <div class="teacher-post" data-i18n="post_zenin">Директор ИГиП, проректор</div>
+                <div class="teacher-desc" data-i18n="desc_zenin">Юридическое образование</div>
+                <div class="teacher-hint">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    <span data-i18n="details_hint">Подробнее</span>
+                </div>
+            </div>
+
+            <div class="teacher-card" data-modal-type="teacher" data-teacher-id="sechenova">
+                <div class="teacher-photo-wrap">
+                    <img class="teacher-photo" src="images/teachers/sechenova.jpg" alt="Sechenova">
+                </div>
+                <div class="teacher-name">Сеченова Екатерина Григорьевна</div>
+                <div class="teacher-divider"></div>
+                <div class="teacher-post" data-i18n="post_sechenova">Проректор по международным связям</div>
+                <div class="teacher-desc" data-i18n="desc_sechenova">Международное сотрудничество</div>
+                <div class="teacher-hint">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    <span data-i18n="details_hint">Подробнее</span>
+                </div>
+            </div>
+
+            <div class="teacher-card" data-modal-type="teacher" data-teacher-id="zagvyazinskaya">
+                <div class="teacher-photo-wrap">
+                    <img class="teacher-photo" src="images/teachers/zagvyazinskaya.jpg" alt="Zagvyazinskaya">
+                </div>
+                <div class="teacher-name">Загвязинская Ольга Анатольевна</div>
+                <div class="teacher-divider"></div>
+                <div class="teacher-post" data-i18n="post_zagvyazinskaya">Проректор по воспитательной работе</div>
+                <div class="teacher-desc" data-i18n="desc_zagvyazinskaya">Молодёжная политика</div>
+                <div class="teacher-hint">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    <span data-i18n="details_hint">Подробнее</span>
+                </div>
+            </div>
+
+            <div class="teacher-card" data-modal-type="teacher" data-teacher-id="chubarov">
+                <div class="teacher-photo-wrap">
+                    <img class="teacher-photo" src="images/teachers/chubarov.jpg" alt="Chubarov">
+                </div>
+                <div class="teacher-name">Чубаров Игорь Михайлович</div>
+                <div class="teacher-divider"></div>
+                <div class="teacher-post" data-i18n="post_chubarov">Директор ШМК, проректор</div>
+                <div class="teacher-desc" data-i18n="desc_chubarov">Развитие soft skills</div>
+                <div class="teacher-hint">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    <span data-i18n="details_hint">Подробнее</span>
+                </div>
+            </div>
+
+            <div class="teacher-card" data-modal-type="teacher" data-teacher-id="fedorova">
+                <div class="teacher-photo-wrap">
+                    <img class="teacher-photo" src="images/teachers/fedorova.jpg" alt="Fedorova">
+                </div>
+                <div class="teacher-name">Федорова Надежда Константиновна</div>
+                <div class="teacher-divider"></div>
+                <div class="teacher-post" data-i18n="post_fedorova">Руководитель программы развития</div>
+                <div class="teacher-desc" data-i18n="desc_fedorova">Стратегическое планирование</div>
+                <div class="teacher-hint">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    <span data-i18n="details_hint">Подробнее</span>
+                </div>
+            </div>
+
+            <div class="teacher-card" data-modal-type="teacher" data-teacher-id="korchemkina">
+                <div class="teacher-photo-wrap">
+                    <img class="teacher-photo" src="images/teachers/korchemkina.jpg" alt="Korchemkina">
+                </div>
+                <div class="teacher-name">Корчемкина Елена Сергеевна</div>
+                <div class="teacher-divider"></div>
+                <div class="teacher-post" data-i18n="post_korchemkina">Финансовый директор</div>
+                <div class="teacher-desc" data-i18n="desc_korchemkina">Бюджетирование, финансы</div>
+                <div class="teacher-hint">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    <span data-i18n="details_hint">Подробнее</span>
+                </div>
+            </div>
+
+            <div class="teacher-card" data-modal-type="teacher" data-teacher-id="malcan">
+                <div class="teacher-photo-wrap">
+                    <img class="teacher-photo" src="images/teachers/malcan.jpg" alt="Malcan">
+                </div>
+                <div class="teacher-name">Мальцан Олег Станиславович</div>
+                <div class="teacher-divider"></div>
+                <div class="teacher-post" data-i18n="post_malcan">Директор по развитию комплекса и безопасности</div>
+                <div class="teacher-desc" data-i18n="desc_malcan">Инфраструктура, безопасность</div>
+                <div class="teacher-hint">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    <span data-i18n="details_hint">Подробнее</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<footer><p>© 2026 ТюмГУ</p></footer>
+<button id="goToTop" class="up-btn">↑ Наверх</button>
+
+<div id="infoModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="modalTitle"></h2>
+            <span class="modal-close">&times;</span>
+        </div>
+        <div class="modal-body">
+            <img id="modalImage" src="" alt="">
+            <p id="modalFullDescription"></p>
+            <div id="modalContacts" class="modal-contacts"></div>
+            <p id="modalQuote"></p>
+        </div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
