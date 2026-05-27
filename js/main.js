@@ -1,7 +1,14 @@
 const translations = {
     ru: {
+        brand_title: "ТюмГУ | Новый корпус",
+        nav_home: "Главная",
+        nav_about: "О корпусе",
+        nav_map: "Карта",
+        nav_quiz: "Викторина",
+        nav_teachers: "Преподаватели",
         welcome_title: "Добро пожаловать в Новый Главный Корпус ТюмГУ",
         welcome_text: "Современное пространство для образования, науки и творчества. Открыт в 2024 году в центре Тюмени. Инновационные лаборатории, атриум и передовая архитектура.",
+        welcome_extra: "Корпус оснащён системами «умного» освещения, климат-контроля и безопасности. Это первый в Тюменской области университетский кампус уровня BREEAM.",
         stats_title: "Новый корпус в цифрах",
         stat1: "м² общей площади",
         stat2: "лабораторий и коворкингов",
@@ -20,6 +27,8 @@ const translations = {
         benefit4: "Актовый зал с профессиональным оборудованием",
         links_title: "Полезные ссылки",
         news_link: "Официальный сайт ТюмГУ",
+        footer_home: "© 2026 Новый корпус ТюмГУ — пространство будущего",
+        go_top: "↑ Наверх",
         about_title: "О новом корпусе: архитектура и возможности",
         about_text: "Шестиэтажный атриум с панорамными лифтами, зоны для индивидуальной и групповой работы, современные лаборатории.",
         about_details: "На первом этаже — кафе и зона отдыха, на втором — коворкинг, с третьего по пятый — учебные аудитории и лаборатории, шестой этаж занимает администрация и конференц-залы.",
@@ -72,8 +81,15 @@ const translations = {
         desc_malcan: "Инфраструктура, безопасность"
     },
     en: {
+        brand_title: "UTMN | New Building",
+        nav_home: "Home",
+        nav_about: "About",
+        nav_map: "Map",
+        nav_quiz: "Quiz",
+        nav_teachers: "Teachers",
         welcome_title: "Welcome to the New Main Building of University of Tyumen",
         welcome_text: "A modern hub for education, science and creativity. Opened in 2024 in the center of Tyumen. Innovative labs, atrium and cutting-edge architecture.",
+        welcome_extra: "The building is equipped with smart lighting, climate control and security systems. It is the first BREEAM-level university campus in the Tyumen region.",
         stats_title: "New building in numbers",
         stat1: "m² total area",
         stat2: "labs and coworkings",
@@ -92,6 +108,8 @@ const translations = {
         benefit4: "Assembly hall with professional equipment",
         links_title: "Useful links",
         news_link: "Official UTM website",
+        footer_home: "© 2026 New UTMN Building — a space for the future",
+        go_top: "↑ Top",
         about_title: "About the building: architecture & features",
         about_text: "Six-story atrium with panoramic elevators, zones for individual and group work, modern laboratories.",
         about_details: "First floor: cafe and lounge; second floor: coworking; third to fifth: classrooms and labs; sixth floor: administration and conference halls.",
@@ -363,6 +381,7 @@ function setLanguage(lang) {
     const langBtn = document.getElementById('langToggle');
     if (langBtn) langBtn.innerText = lang === 'ru' ? 'EN' : 'RU';
     updatePageTexts();
+    updateThemeButton();
 
     if (window.location.pathname.includes('quiz.html')) {
         quizAnswers = new Array(quizData[lang].length).fill(null);
@@ -371,6 +390,12 @@ function setLanguage(lang) {
         localStorage.setItem('quizScore', quizScore);
         renderQuiz();
     }
+}
+
+function updateThemeButton() {
+    const themeBtn = document.getElementById('themeToggle');
+    if (!themeBtn) return;
+    themeBtn.innerText = currentTheme === 'dark' ? (currentLang === 'ru' ? 'Светлая' : 'Light') : (currentLang === 'ru' ? 'Тёмная' : 'Dark');
 }
 
 function applyTheme(theme) {
@@ -382,10 +407,9 @@ function applyTheme(theme) {
         document.body.classList.remove('dark');
         bgAnim.innerHTML = '<div class="clouds"><div style="width: 200px; height: 200px; top: 10%; left: 5%;"></div><div style="width: 300px; height: 300px; bottom: 20%; right: 10%;"></div><div style="width: 150px; height: 150px; top: 60%; left: 70%;"></div></div>';
     }
-    const themeBtn = document.getElementById('themeToggle');
-    if (themeBtn) themeBtn.innerText = theme === 'dark' ? (currentLang === 'ru' ? 'Светлая' : 'Light') : (currentLang === 'ru' ? 'Тёмная' : 'Dark');
     localStorage.setItem('appTheme', theme);
     currentTheme = theme;
+    updateThemeButton();
 }
 
 function toggleTheme() {
